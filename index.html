@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <h1>~$ sudo Library</h1>
+  <button id="start-btn">Load Library</button>
   <table id="table">
     <tr>
       <th>Title</th>
@@ -14,20 +16,54 @@
       <th>Pages</th>
       <th>Read</th>
     </tr>
-    <!-- <tr class="book">
-      <td>book title</td>
-      <td>book author</td>
-      <td>book pages</td>
-      <td>book read</td>
-    </tr> -->
+    <div>
+      <!-- 
+      <tr class="book">
+        <td class="title-cell">book title</td>
+        <td class="author-cell">book author</td>
+        <td class="pages-cell">book pages</td>
+        <td class="read-cell">book read</td>
+      </tr> 
+      <tr>
+        <td class="remove" id="somthing tied to the book">remove book</td>
+    -->
     <!-- for each book - end with-->
-    <!-- <tr class="end">
-      <td>...</td>
-      <td>total read: ##</td>
-      <td>Total unread: ##</td>
-      <td>Total: ##</td>
+    <!-- 
+      <tr class="end">
+        <td class="easter-cell">...</td>
+        <td class="author-cell">total read: ##</td>
+        <td class="pages-cell">Total unread: ##</td>
+        <td class="read-cell">Total: ##</td>
+      </tr> --> 
+    </div>
+    <tr>
+      <td><button id="add-book">Add Book<span><br>+</span></button></td>
     </tr>
-  </table> -->
+    <tr>
+
+    </tr>
+  </table>
+
+  <!-- pop-up -->
+  <form id="pop-up">
+    <div>
+      <label for="title">Title:</label>
+      <input required type="text" id="title" name="title">
+    </div>
+    <div>
+      <label for="author">Author:</label>
+      <input required type="text" id="author" name="author">
+    </div>
+    <div>
+      <label for="pages">Pages:</label>
+      <input required type="number" id="pages" name="pages">
+    </div>
+    <div>
+      <label for="read">Read:</label>
+      <input type="checkbox" id="read" name="read">
+    </div>
+    <div>
+      <button id="submit-book">Submit</button>
 
   <script src="./script.js"></script>
 </body>
