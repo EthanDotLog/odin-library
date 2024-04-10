@@ -35,23 +35,31 @@ function printLibrary() {
   for (let i = 0; i < myLibrary.length; i++) {
     table.innerHTML += `
     <tr class="book">
-      <td>${myLibrary[i].title}</td>
-      <td>${myLibrary[i].author}</td>
-      <td>${myLibrary[i].pages}</td>
-      <td>${myLibrary[i].read === true ? '&#x2611;' : '&#x2612;'}</td>
+      <td class="book-cell" data="myLibrary${[i]}">${myLibrary[i].title}</td>
+      <td class="book-cell" data="myLibrary${[i]}">${myLibrary[i].author}</td>
+      <td class="book-cell" data="myLibrary${[i]}">${myLibrary[i].pages}</td>
+      <td class="book-cell" data="myLibrary${[i]}">${myLibrary[i].read === true ? '&#x2611;' : '&#x2612;'}</td>
     </tr>
     <tr>
-      <td class="remove" value="myLibrary[i]" id="book-remove">remove book</td>
+      <td class="hidden" id="myLibrary${[i]}">remove book</td>
     </tr>
     `
   }
+  document.querySelectorAll('.book-cell').forEach(cell => {
+    cell.addEventListener('click', function(e) {
+      document.getElementById(this.getAttribute('data')).classList.toggle('hidden');
+    })
+  })
 }
 
 
 
-
+document.getElementById('add-book').addEventListener('click', function() {
+  document.getElementById('pop-up').classList.toggle('hidden');
+});
 
 document.getElementById('submit-book').addEventListener('click', function(e){
   e.preventDefault();
   addBookToLibrary();
+  document.getElementById('pop-up').classList.toggle('hidden');
 });
