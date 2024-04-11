@@ -1,205 +1,46 @@
-@font-face {
-  font-family: 'dejavu_sans_monobook';
-  src: url('./Webfontkit-dejavu-sans-mono/dejavusansmono-webfont.woff2') format('woff2'),
-       url('./Webfontkit-dejavu-sans-mono/dejavusansmono-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-
-
-
-@font-face {
-  font-family: 'dejavu_sans_monobold';
-  src: url('./Webfontkit-dejavu-sans-mono/dejavusansmono-bold-webfont.woff2') format('woff2'),
-       url('./Webfontkit-dejavu-sans-mono/dejavusansmono-bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-
-
-
-@font-face {
-  font-family: 'dejavu_sans_monobold_oblique';
-  src: url('./Webfontkit-dejavu-sans-mono/dejavusansmono-boldoblique-webfont.woff2') format('woff2'),
-       url('./Webfontkit-dejavu-sans-mono/dejavusansmono-boldoblique-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-.hidden {
-  display: none !important;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'dejavu_sans_monobook', sans-serif;
 }
 
-body {
-  display: grid;
-}
 
-h1 {
-  text-align: center;
-  padding: 1rem 2rem;
-}
 
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  gap: 3rem;
-  font-weight: bold;
-}
 
-#start-btn:hover {
-  background-color: rgba(26, 28, 131, 0.3);
-}
 
-button > .symbol {
-  font-size: 1.5rem;
-}
 
-table {
-  display: grid;
-}
 
-tr {
-  display: grid;
-  grid-template-columns: 4fr 3fr 2fr 1fr;
-}
 
-.book {
-  padding: 1rem 0;
-}
 
-.book:hover {
-  background-color: rgba(255, 251, 0, 0.2);
-}
 
-th {
-  text-decoration: underline;
-}
 
-td, th {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-td {
-  cursor: pointer;
-}
 
-.title, .author {
-  justify-content: flex-start;
-  padding-left: 1rem;
-}
 
-#add-book {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.4rem 1rem;
-  cursor: pointer;
-  width: 100%;
-  font-weight: bold;
-}
 
-#add-book:hover {
-  background-color: rgba(11, 102, 30, 0.3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden {
+  display: none;
 }
 
 .delete-btn {
-  padding: .5rem 0;
-  cursor: crosshair;
-  grid-column: span 4;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
+
 }
-
-.delete-btn:hover {
-  background-color: rgba(148, 7, 7, 0.3);
-}
-
-
-
-#pop-up {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  gap: 2rem;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: azure;
-}
-
-#pop-up > div {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 70%;
-}
-
-#pop-up > div > label {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-#pop-up > div > input {
-  font-size: 1.5rem;
-  background-color: rgba(226, 226, 226, 0.877);
-  line-height: 3rem;
-}
-
-#read {
-  width: 2rem;
-  height: 2rem;
-}
-
-#read-label {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

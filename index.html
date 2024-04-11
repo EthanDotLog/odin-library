@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>~$ sudo Library</h1>
-  <button id="start-btn"><span class="symbol">&#x2965;</span> Load Library <span class="symbol">&#x2965;</span></button>
+  <button id="start-btn">Load Library</button>
   <div>
     <table id="table">
       <!-- 
@@ -31,7 +31,7 @@
       </tr> --> 
     </table>
     <tr>
-      <td><button id="add-book">Add Book<br>+</button></td>
+      <td><button id="add-book">Add Book<span><br>+</span></button></td>
     </tr>
     <tr>
 
@@ -53,13 +53,11 @@
       <input required type="number" id="pages" name="pages">
     </div>
     <div>
-      <label id="read-label" for="read">Read:
+      <label for="read">Read:</label>
       <input type="checkbox" id="read" name="read">
-      </label>
     </div>
     <div>
       <button id="submit-book">Submit</button>
-    </div>
 
   <script src="./script.js"></script>
 </body>

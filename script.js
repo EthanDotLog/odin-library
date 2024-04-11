@@ -35,26 +35,24 @@ function addBookToLibrary() {
 function printLibrary() {
   table.innerHTML = `
   <tr>
-    <th class="title">Title</th>
-    <th class="author">Author</th>
+    <th>Title</th>
+    <th>Author</th>
     <th>Pages</th>
     <th>Read</th>
-</tr>
+  </tr>
 `;
   for (let i = 0; i < myLibrary.length; i++) {
     
     table.innerHTML += `
-    <hr>
     <tr class="book">
-      <td class="book-cell title" data="myLibrary${[i]}">${myLibrary[i].title}</td>
-      <td class="book-cell author" data="myLibrary${[i]}">${myLibrary[i].author}</td>
+      <td class="book-cell" data="myLibrary${[i]}">${myLibrary[i].title}</td>
+      <td class="book-cell" data="myLibrary${[i]}">${myLibrary[i].author}</td>
       <td class="book-cell" data="myLibrary${[i]}">${myLibrary[i].pages}</td>
       <td class="book-cell" data="myLibrary${[i]}">${myLibrary[i].read === true ? '&#x2611;' : '&#x2610;'}</td>
     </tr>
     <tr>
-      <td class="hidden delete-btn" id="myLibrary${[i]}">remove book</td>
+      <td class="hidden delete-btn" colspan="4" id="myLibrary${[i]}">remove book</td>
     </tr>
-    <hr>
     `
   }
     document.querySelectorAll('.book-cell').forEach(cell => {
