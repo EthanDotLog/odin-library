@@ -65,7 +65,8 @@ function printLibrary() {
   document.querySelectorAll('.delete-btn').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
-      myLibrary.splice(this.getAttribute('id'), 1);
+      const index = this.getAttribute('id').split('myLibrary')[1];
+      myLibrary.splice(index, 1);
       printLibrary();
     })
   })
@@ -82,11 +83,3 @@ document.getElementById('submit-book').addEventListener('click', function(e){
   addBookToLibrary();
   document.getElementById('pop-up').classList.toggle('hidden');
 });
-
-document.querySelectorAll('.delete-btn').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    myLibrary.splice(this.getAttribute('id'), 1);
-    printLibrary();
-  })
-})
