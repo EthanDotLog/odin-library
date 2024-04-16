@@ -31,7 +31,6 @@ function addBookToLibrary() {
 }
 
 
-
 function printLibrary() {
   table.innerHTML = `
   <tr>
