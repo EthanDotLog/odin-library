@@ -1,8 +1,4 @@
-const table = document.getElementById('table')
-
-const myLibrary = [
-  
-];
+const myLibrary = [];
 
 testbook1 = new Book('book title1', 'book author1', 'book pages1', false)
 testbook2 = new Book('book title2', 'book author2', 'book pages2', true)
@@ -16,10 +12,6 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
-
-document.getElementById('start-btn').addEventListener('click', function() {
-  printLibrary();
-})
 function addBookToLibrary() {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
@@ -30,8 +22,8 @@ function addBookToLibrary() {
   printLibrary();
 }
 
-
 function printLibrary() {
+  const table = document.getElementById('table')
   table.innerHTML = `
   <tr>
     <th class="title">Title</th>
@@ -72,6 +64,9 @@ function printLibrary() {
 }
 
 
+document.getElementById('start-btn').addEventListener('click', function() {
+  printLibrary();
+})
 
 document.getElementById('add-book').addEventListener('click', function() {
   document.getElementById('pop-up').classList.toggle('hidden');
